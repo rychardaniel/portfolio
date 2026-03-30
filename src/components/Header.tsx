@@ -37,7 +37,7 @@ export default function Header({ theme, onToggleTheme }: HeaderProps) {
           href="#sobre"
           className="text-lg font-semibold text-slate-900 dark:text-slate-50 tracking-tight hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
         >
-          RD
+          RS
         </a>
 
         <div className="hidden md:flex items-center gap-8">
