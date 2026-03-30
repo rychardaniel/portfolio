@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+    html {
+        scroll-behavior: smooth;
+    }
 
-  body {
-    @apply bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased;
-  }
+    body {
+        @apply bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased;
+    }
 }

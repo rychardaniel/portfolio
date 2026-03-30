@@ -1,44 +1,44 @@
 {
-  "name": "Rychard Santos",
-  "role": "Desenvolvedor Full-Stack",
-  "company": {
-    "name": "Atendare",
-    "url": "https://atendare.com"
-  },
-  "bio": "Desenvolvedor full-stack focado em criar produtos web de qualidade. Trabalho com React e ASP.NET Core no dia a dia, construindo soluções para CRM e automação de vendas. Gosto de código limpo, interfaces bem pensadas e de aprender coisas novas constantemente.",
-  "photo": "https://github.com/rychardaniel.png",
-  "education": {
-    "course": "Engenharia de Computação",
-    "institution": "Sociedade Educacional Três de Maio - Setrem",
-    "startYear": 2024,
-    "startSemester": 1,
-    "totalSemesters": 10
-  },
-  "social": {
-    "github": "https://github.com/rychardaniel",
-    "linkedin": "https://linkedin.com/in/rychardaniel1"
-  },
-  "projects": [
-    {
-      "id": 1,
-      "name": "Atendare CRM",
-      "description": "Plataforma SaaS de CRM para gestão de clientes, funil de vendas e automações. Desenvolvido com React, TypeScript e ASP.NET Core.",
-      "image": "https://placehold.co/800x450/2563EB/FFFFFF?text=Atendare+CRM&font=roboto",
-      "link": "https://atendare.com"
+    "name": "Rychard Santos",
+    "role": "Desenvolvedor Full-Stack",
+    "company": {
+        "name": "Atendare",
+        "url": "https://atendare.com"
     },
-    {
-      "id": 2,
-      "name": "Portfolio",
-      "description": "Portfolio pessoal construído com Vite, React, TypeScript e Tailwind CSS, com animações usando Framer Motion.",
-      "image": "https://placehold.co/800x450/1E3A5F/FFFFFF?text=Portfolio&font=roboto",
-      "link": "https://rychard.dev"
+    "bio": "Desenvolvedor full-stack focado em criar produtos web de qualidade. Trabalho com React e ASP.NET Core no dia a dia, construindo soluções para CRM e automação de vendas. Gosto de código limpo, interfaces bem pensadas e de aprender coisas novas constantemente.",
+    "photo": "https://github.com/rychardaniel.png",
+    "education": {
+        "course": "Engenharia de Computação",
+        "institution": "Sociedade Educacional Três de Maio - Setrem",
+        "startYear": 2024,
+        "startSemester": 1,
+        "totalSemesters": 10
     },
-    {
-      "id": 3,
-      "name": "Projeto Exemplo",
-      "description": "Aplicação de exemplo para demonstrar a estrutura de projetos no portfolio. Substituir com projetos reais.",
-      "image": "https://placehold.co/800x450/475569/FFFFFF?text=Projeto+Exemplo&font=roboto",
-      "link": "#"
-    }
-  ]
+    "social": {
+        "github": "https://github.com/rychardaniel",
+        "linkedin": "https://linkedin.com/in/rychardaniel1"
+    },
+    "projects": [
+        {
+            "id": 1,
+            "name": "Atendare CRM",
+            "description": "Plataforma SaaS de CRM para gestão de clientes, funil de vendas e automações. Desenvolvido com React, TypeScript e ASP.NET Core.",
+            "image": "https://placehold.co/800x450/2563EB/FFFFFF?text=Atendare+CRM&font=roboto",
+            "link": "https://atendare.com"
+        },
+        {
+            "id": 2,
+            "name": "Portfolio",
+            "description": "Portfolio pessoal construído com Vite, React, TypeScript e Tailwind CSS, com animações usando Framer Motion.",
+            "image": "https://placehold.co/800x450/1E3A5F/FFFFFF?text=Portfolio&font=roboto",
+            "link": "https://rychard.dev"
+        },
+        {
+            "id": 3,
+            "name": "Projeto Exemplo",
+            "description": "Aplicação de exemplo para demonstrar a estrutura de projetos no portfolio. Substituir com projetos reais.",
+            "image": "https://placehold.co/800x450/475569/FFFFFF?text=Projeto+Exemplo&font=roboto",
+            "link": "#"
+        }
+    ]
 }
