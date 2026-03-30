@@ -21,24 +21,10 @@
 	"projects": [
 		{
 			"id": 1,
-			"name": "Atendare CRM",
-			"description": "Plataforma SaaS de CRM para gestão de clientes, funil de vendas e automações. Desenvolvido com React, TypeScript e ASP.NET Core.",
-			"image": "https://placehold.co/800x450/2563EB/FFFFFF?text=Atendare+CRM&font=roboto",
-			"link": "https://atendare.com"
-		},
-		{
-			"id": 2,
-			"name": "Portfolio",
-			"description": "Portfolio pessoal construído com Vite, React, TypeScript e Tailwind CSS, com animações usando Framer Motion.",
-			"image": "https://placehold.co/800x450/1E3A5F/FFFFFF?text=Portfolio&font=roboto",
-			"link": "https://rychard.dev"
-		},
-		{
-			"id": 3,
-			"name": "Projeto Exemplo",
-			"description": "Aplicação de exemplo para demonstrar a estrutura de projetos no portfolio. Substituir com projetos reais.",
-			"image": "https://placehold.co/800x450/475569/FFFFFF?text=Projeto+Exemplo&font=roboto",
-			"link": "#"
+			"name": "ToolScore",
+			"description": "Um aplicativo de placar online, onde é possível gerenciar o placar de diversas modalidades ao vivo e compartilhar com outras pessoas.",
+			"image": "/toolscore-image.jpg",
+			"link": "https://toolscore.rychard.dev"
 		}
 	]
 }
