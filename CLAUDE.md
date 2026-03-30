@@ -33,11 +33,11 @@ Edite apenas `src/data/portfolio.json`. Nenhum componente precisa ser alterado p
 
 ```json
 {
-    "id": 4,
-    "name": "Nome do Projeto",
-    "description": "Breve descrição do que o projeto faz.",
-    "image": "URL ou caminho relativo para imagem (ex: /images/projeto.png)",
-    "link": "https://link-do-projeto.com"
+	"id": 4,
+	"name": "Nome do Projeto",
+	"description": "Breve descrição do que o projeto faz.",
+	"image": "URL ou caminho relativo para imagem (ex: /images/projeto.png)",
+	"link": "https://link-do-projeto.com"
 }
 ```
 
