@@ -1,5 +1,5 @@
 {
-  "name": "Rychard Daniel",
+  "name": "Rychard Santos",
   "role": "Desenvolvedor Full-Stack",
   "company": {
     "name": "Atendare",
@@ -9,14 +9,14 @@
   "photo": "https://github.com/rychardaniel.png",
   "education": {
     "course": "Engenharia de Computação",
-    "institution": "Universidade do Vale do Rio dos Sinos",
+    "institution": "Sociedade Educacional Três de Maio - Setrem",
     "startYear": 2024,
     "startSemester": 1,
     "totalSemesters": 10
   },
   "social": {
     "github": "https://github.com/rychardaniel",
-    "linkedin": "https://linkedin.com/in/rychardaniel"
+    "linkedin": "https://linkedin.com/in/rychardaniel1"
   },
   "projects": [
     {
