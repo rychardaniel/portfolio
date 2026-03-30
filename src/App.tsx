@@ -1,36 +1,24 @@
-import { useEffect } from "react";
-import Layout from "./components/Layout/Layout";
-import Hero from "./components/Hero/Hero";
-import TechStack from "./components/TechStack/TechStack";
-import CaseStudies from "./components/CaseStudies/CaseStudies";
-import About from "./components/About/About";
-import Footer from "./components/Footer/Footer";
-import config from "./data/config.json";
+import { useTheme } from './hooks/useTheme'
+import Header from './components/Header'
+import About from './components/About'
+import Projects from './components/Projects'
+import Footer from './components/Footer'
+import portfolioData from './data/portfolio.json'
+import type { Portfolio } from './types/portfolio'
 
-function App() {
-    useEffect(() => {
-        const { theme } = config;
-        const root = document.documentElement;
+const data = portfolioData as Portfolio
 
-        root.style.setProperty("--color-bg-primary", theme.primaryColor);
-        root.style.setProperty("--color-bg-secondary", theme.secondaryColor);
-        root.style.setProperty("--color-accent-green", theme.accentGreen);
-        root.style.setProperty("--color-accent-blue", theme.accentBlue);
-        root.style.setProperty("--color-accent-amber", theme.accentAmber);
-        root.style.setProperty("--color-accent-red", theme.accentRed);
+export default function App() {
+  const { theme, toggle } = useTheme()
 
-        document.title = `${config.profile.shortName} Portfolio`;
-    }, []);
-
-    return (
-        <Layout>
-            <Hero />
-            <TechStack />
-            <CaseStudies />
-            <About />
-            <Footer />
-        </Layout>
-    );
+  return (
+    <div className="min-h-screen">
+      <Header theme={theme} onToggleTheme={toggle} />
+      <main>
+        <About data={data} />
+        <Projects projects={data.projects} />
+      </main>
+      <Footer name={data.name} social={data.social} />
+    </div>
+  )
 }
-
-export default App;
