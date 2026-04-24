@@ -25,6 +25,13 @@
 			"description": "Um aplicativo de placar online, onde é possível gerenciar o placar de diversas modalidades ao vivo e compartilhar com outras pessoas.",
 			"image": "/toolscore-image.jpg",
 			"link": "https://toolscore.rychard.dev"
+		},
+		{
+			"id": 2,
+			"name": "Linker",
+			"description": "Um encurtador de links simples, leve e gratuito, com foco em privacidade e facilidade de uso.",
+			"image": "/linker-image.jpg",
+			"link": "https://linker.rychard.dev"
 		}
 	]
 }
