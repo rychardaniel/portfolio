@@ -9,6 +9,7 @@ interface HeaderProps {
 
 const navLinks = [
 	{ label: 'Sobre', href: '#sobre' },
+	{ label: 'Habilidades', href: '#habilidades' },
 	{ label: 'Projetos', href: '#projetos' },
 ]
 
