@@ -29,14 +29,14 @@ export default function Header({ theme, onToggleTheme }: HeaderProps) {
 		<header
 			className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 				scrolled
-					? 'bg-white/85 dark:bg-slate-950/85 backdrop-blur-md shadow-sm border-b border-slate-200/60 dark:border-slate-800/60'
-					: 'bg-white/60 dark:bg-slate-950/60 backdrop-blur-sm'
+					? 'border-b border-slate-800/80 bg-[#050505]/86 shadow-[0_12px_40px_rgba(0,0,0,0.28)] backdrop-blur-md'
+					: 'border-b border-transparent bg-[#050505]/45 backdrop-blur-sm'
 			}`}
 		>
-			<nav className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+			<nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
 				<a
 					href="#sobre"
-					className="text-lg font-semibold text-slate-900 dark:text-slate-50 tracking-tight hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+					className="font-mono text-sm font-semibold tracking-[0.18em] text-slate-100 transition-colors hover:text-blue-300"
 				>
 					RS
 				</a>
@@ -46,7 +46,7 @@ export default function Header({ theme, onToggleTheme }: HeaderProps) {
 						<a
 							key={link.href}
 							href={link.href}
-							className="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-50 transition-colors"
+							className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-slate-500 transition-colors hover:text-slate-100"
 						>
 							{link.label}
 						</a>
@@ -57,7 +57,7 @@ export default function Header({ theme, onToggleTheme }: HeaderProps) {
 					<button
 						onClick={onToggleTheme}
 						aria-label="Alternar tema"
-						className="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
+						className="rounded-lg border border-slate-800 p-2 text-slate-400 transition-all hover:border-slate-700 hover:bg-slate-900 hover:text-slate-50"
 					>
 						{theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
 					</button>
@@ -65,7 +65,7 @@ export default function Header({ theme, onToggleTheme }: HeaderProps) {
 					<button
 						onClick={() => setMenuOpen((o) => !o)}
 						aria-label="Menu"
-						className="md:hidden p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
+						className="rounded-lg border border-slate-800 p-2 text-slate-400 transition-all hover:bg-slate-900 md:hidden"
 					>
 						{menuOpen ? <X size={18} /> : <Menu size={18} />}
 					</button>
@@ -79,7 +79,7 @@ export default function Header({ theme, onToggleTheme }: HeaderProps) {
 						animate={{ opacity: 1, height: 'auto' }}
 						exit={{ opacity: 0, height: 0 }}
 						transition={{ duration: 0.2, ease: 'easeInOut' }}
-						className="md:hidden overflow-hidden bg-white/95 dark:bg-slate-950/95 backdrop-blur-md border-b border-slate-200/60 dark:border-slate-800/60"
+						className="overflow-hidden border-b border-slate-800/80 bg-[#050505]/96 backdrop-blur-md md:hidden"
 					>
 						<div className="px-6 py-4 flex flex-col gap-4">
 							{navLinks.map((link) => (
@@ -87,7 +87,7 @@ export default function Header({ theme, onToggleTheme }: HeaderProps) {
 									key={link.href}
 									href={link.href}
 									onClick={handleNavClick}
-									className="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+									className="py-1 font-mono text-xs font-medium uppercase tracking-[0.16em] text-slate-400 transition-colors hover:text-blue-300"
 								>
 									{link.label}
 								</a>

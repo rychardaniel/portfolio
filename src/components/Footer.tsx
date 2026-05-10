@@ -10,10 +10,10 @@ export default function Footer({ name, social }: FooterProps) {
 	const year = new Date().getFullYear()
 
 	return (
-		<footer className="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 py-8">
-			<div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-				<p className="text-sm text-slate-400 dark:text-slate-500">
-					&copy; {year} {name}
+		<footer className="border-t border-slate-800 bg-[#050505] py-8">
+			<div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
+				<p className="font-mono text-xs text-slate-500">
+					&copy; {year} {name.toLowerCase()}
 				</p>
 				<div className="flex items-center gap-4">
 					{social.github && (
@@ -22,7 +22,7 @@ export default function Footer({ name, social }: FooterProps) {
 							target="_blank"
 							rel="noopener noreferrer"
 							aria-label="GitHub"
-							className="text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
+							className="text-slate-500 transition-colors hover:text-blue-300"
 						>
 							<GithubIcon size={18} />
 						</a>
@@ -33,7 +33,7 @@ export default function Footer({ name, social }: FooterProps) {
 							target="_blank"
 							rel="noopener noreferrer"
 							aria-label="LinkedIn"
-							className="text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
+							className="text-slate-500 transition-colors hover:text-blue-300"
 						>
 							<LinkedinIcon size={18} />
 						</a>
