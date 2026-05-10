@@ -1,4 +1,4 @@
-# Portfolio — CLAUDE.md
+# Portfolio — AGENTS.md
 
 ## Stack
 

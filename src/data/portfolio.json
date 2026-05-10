@@ -33,5 +33,20 @@
 			"image": "/linker-image.png",
 			"link": "https://linker.rychard.dev"
 		}
+	],
+	"skills": [
+		{ "name": "React", "category": "frontend" },
+		{ "name": "TypeScript", "category": "language" },
+		{ "name": "Tailwind CSS", "category": "frontend" },
+		{ "name": "Framer Motion", "category": "frontend" },
+		{ "name": "ASP.NET Core", "category": "backend" },
+		{ "name": "Node.js", "category": "backend" },
+		{ "name": "REST API", "category": "backend" },
+		{ "name": "C#", "category": "language" },
+		{ "name": "Postgres", "category": "database" },
+		{ "name": "Mysql", "category": "database" },
+		{ "name": "Git", "category": "tools" },
+		{ "name": "Docker", "category": "tools" },
+		{ "name": "Vite", "category": "tools" }
 	]
 }

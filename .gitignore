@@ -4,3 +4,8 @@ dist
 *.local
 pnpm-debug.log*
 .claude/
+.agents/
+.superpowers/
+.playwright-cli/
+.wrangler/
+.dev.vars

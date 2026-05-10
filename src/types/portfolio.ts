@@ -24,6 +24,11 @@ export interface Project {
 	link: string
 }
 
+export interface Skill {
+	name: string
+	category: 'frontend' | 'backend' | 'language' | 'database' | 'tools'
+}
+
 export interface Portfolio {
 	name: string
 	role: string
@@ -33,4 +38,5 @@ export interface Portfolio {
 	education: Education
 	social: Social
 	projects: Project[]
+	skills: Skill[]
 }
