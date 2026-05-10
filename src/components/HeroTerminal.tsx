@@ -62,7 +62,7 @@ interface HeroTerminalProps {
 
 export default function HeroTerminal({ data }: HeroTerminalProps) {
 	const sectionRef = useRef<HTMLElement>(null)
-	const headingRef = useRef<HTMLHeadingElement>(null)
+	const profileHeadingRef = useRef<HTMLDivElement>(null)
 	const gridRef = useRef<HTMLDivElement>(null)
 	const panelRef = useRef<HTMLDivElement>(null)
 	const name = data.name.toUpperCase()
@@ -95,7 +95,7 @@ export default function HeroTerminal({ data }: HeroTerminalProps) {
 			})
 
 			timeline
-				.to(headingRef.current, { yPercent: -14, scale: 0.94, opacity: 0.82 }, 0)
+				.to(profileHeadingRef.current, { yPercent: -14, scale: 0.94, opacity: 0.82 }, 0)
 				.to(gridRef.current, { yPercent: -8, opacity: 1 }, 0)
 				.to(panelRef.current, { yPercent: 12, rotateX: -3 }, 0)
 
@@ -150,14 +150,20 @@ export default function HeroTerminal({ data }: HeroTerminalProps) {
 						render portfolio --profile rychard
 					</motion.div>
 
-					<h1
-						ref={headingRef}
-						className="glitch-text max-w-[11ch] text-5xl font-bold leading-[0.88] text-slate-50 sm:text-6xl lg:text-7xl"
-						data-text={name}
-						aria-label={data.name}
-					>
-						{scrambledName}
-					</h1>
+					<div ref={profileHeadingRef} className="flex items-center gap-5">
+						<img
+							src={data.photo}
+							alt={`Foto de ${data.name}`}
+							className="h-20 w-20 rounded-full border border-blue-300/55 object-cover shadow-[0_0_36px_rgba(37,99,235,0.26)] sm:h-24 sm:w-24 lg:h-28 lg:w-28"
+						/>
+						<h1
+							className="glitch-text max-w-[11ch] text-[clamp(2rem,10vw,2.5rem)] font-bold leading-[0.9] text-slate-50 md:text-5xl lg:text-6xl"
+							data-text={name}
+							aria-label={data.name}
+						>
+							{scrambledName}
+						</h1>
+					</div>
 
 					<motion.div
 						initial={{ opacity: 0, y: 16 }}
