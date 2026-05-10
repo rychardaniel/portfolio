@@ -19,7 +19,7 @@ export default function App() {
 			<Header theme={theme} onToggleTheme={toggle} />
 			<main>
 				<HeroTerminal data={data} />
-				<Skills skills={data.skills} />
+				<Skills skills={data.skills} theme={theme} />
 				<Projects projects={data.projects} />
 			</main>
 			<Footer name={data.name} social={data.social} />

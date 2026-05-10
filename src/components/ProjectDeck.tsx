@@ -25,7 +25,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 	const glowY = useMotionValue(50)
 	const rx = useSpring(rotateX, { stiffness: 260, damping: 28 })
 	const ry = useSpring(rotateY, { stiffness: 260, damping: 28 })
-	const glow = useMotionTemplate`radial-gradient(circle 240px at ${glowX}% ${glowY}%, rgba(96,165,250,0.16), transparent 70%)`
+	const glow = useMotionTemplate`radial-gradient(circle 240px at ${glowX}% ${glowY}%, rgba(37,99,235,0.12), transparent 70%)`
 
 	const handleMove = (event: React.MouseEvent<HTMLElement>) => {
 		if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return
@@ -62,38 +62,40 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 				onMouseMove={handleMove}
 				onMouseLeave={handleLeave}
 				style={{ rotateX: rx, rotateY: ry, transformStyle: 'preserve-3d' }}
-				className="terminal-project-card group relative grid overflow-hidden rounded-[10px] border border-slate-800 bg-slate-950/85 md:grid-cols-[280px_1fr]"
+				className="terminal-project-card group relative grid overflow-hidden rounded-[10px] border border-slate-200 bg-white/85 md:grid-cols-[280px_1fr] dark:border-slate-800 dark:bg-slate-950/85"
 			>
 				<motion.div
 					className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
 					style={{ background: glow }}
 				/>
 
-				<div className="relative h-52 overflow-hidden bg-slate-900 md:h-full">
+				<div className="relative h-52 overflow-hidden bg-slate-100 md:h-full dark:bg-slate-900">
 					<img
 						src={project.image}
 						alt={project.name}
 						className="h-full w-full object-cover opacity-80 grayscale transition duration-700 group-hover:scale-105 group-hover:opacity-100 group-hover:grayscale-0"
 					/>
-					<div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
+					<div className="absolute inset-0 bg-gradient-to-t from-white/45 to-transparent dark:from-slate-950/60" />
 				</div>
 
 				<div className="relative z-10 flex min-h-[250px] flex-col justify-center p-6 md:p-8">
 					<div className="mb-4 flex items-center gap-3">
-						<span className="font-mono text-[10px] uppercase tracking-[0.22em] text-blue-300/80">
+						<span className="font-mono text-[10px] uppercase tracking-[0.22em] text-blue-600 dark:text-blue-300/80">
 							project.{String(project.id).padStart(2, '0')}
 						</span>
-						<span className="h-px flex-1 bg-slate-800" />
+						<span className="h-px flex-1 bg-slate-200 dark:bg-slate-800" />
 					</div>
-					<h3 className="text-2xl font-semibold text-slate-50">{project.name}</h3>
-					<p className="mt-3 max-w-2xl text-sm leading-6 text-slate-400 md:text-base">
+					<h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-50">
+						{project.name}
+					</h3>
+					<p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600 md:text-base dark:text-slate-400">
 						{project.description}
 					</p>
 					<a
 						href={project.link}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="mt-6 inline-flex w-fit items-center gap-2 font-mono text-sm text-blue-300 transition-colors hover:text-blue-100"
+						className="mt-6 inline-flex w-fit items-center gap-2 font-mono text-sm text-blue-700 transition-colors hover:text-blue-500 dark:text-blue-300 dark:hover:text-blue-100"
 					>
 						abrir projeto
 						<ExternalLink size={15} />

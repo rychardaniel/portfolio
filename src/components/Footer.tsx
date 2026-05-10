@@ -10,7 +10,7 @@ export default function Footer({ name, social }: FooterProps) {
 	const year = new Date().getFullYear()
 
 	return (
-		<footer className="border-t border-slate-800 bg-[#050505] py-8">
+		<footer className="border-t border-slate-200 bg-white py-8 dark:border-slate-800 dark:bg-[#050505]">
 			<div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
 				<p className="font-mono text-xs text-slate-500">
 					&copy; {year} {name.toLowerCase()}
@@ -22,7 +22,7 @@ export default function Footer({ name, social }: FooterProps) {
 							target="_blank"
 							rel="noopener noreferrer"
 							aria-label="GitHub"
-							className="text-slate-500 transition-colors hover:text-blue-300"
+							className="text-slate-500 transition-colors hover:text-blue-600 dark:hover:text-blue-300"
 						>
 							<GithubIcon size={18} />
 						</a>
@@ -33,7 +33,7 @@ export default function Footer({ name, social }: FooterProps) {
 							target="_blank"
 							rel="noopener noreferrer"
 							aria-label="LinkedIn"
-							className="text-slate-500 transition-colors hover:text-blue-300"
+							className="text-slate-500 transition-colors hover:text-blue-600 dark:hover:text-blue-300"
 						>
 							<LinkedinIcon size={18} />
 						</a>

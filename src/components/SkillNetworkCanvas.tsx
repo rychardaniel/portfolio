@@ -23,9 +23,10 @@ interface Node {
 
 interface SkillNetworkCanvasProps {
 	skills: Skill[]
+	theme: 'light' | 'dark'
 }
 
-export default function SkillNetworkCanvas({ skills }: SkillNetworkCanvasProps) {
+export default function SkillNetworkCanvas({ skills, theme }: SkillNetworkCanvasProps) {
 	const canvasRef = useRef<HTMLCanvasElement>(null)
 
 	useEffect(() => {
@@ -109,7 +110,7 @@ export default function SkillNetworkCanvas({ skills }: SkillNetworkCanvasProps) 
 
 		const draw = (time: number) => {
 			ctx.clearRect(0, 0, width, height)
-			const dark = true
+			const dark = theme === 'dark'
 
 			if (!reducedMotion) update(time)
 
@@ -210,7 +211,7 @@ export default function SkillNetworkCanvas({ skills }: SkillNetworkCanvasProps) 
 			observer.disconnect()
 			resizeObserver.disconnect()
 		}
-	}, [skills])
+	}, [skills, theme])
 
 	return <canvas ref={canvasRef} className="block h-[380px] w-full md:h-[430px]" />
 }

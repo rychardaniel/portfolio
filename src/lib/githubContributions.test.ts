@@ -58,6 +58,17 @@ describe('githubContributions', () => {
 		expect(result.totalContributions).toBeGreaterThan(0)
 	})
 
+	it('builds a full-year fallback grid by default', () => {
+		const result = buildFallbackContributions(
+			'rychardaniel',
+			new Date('2026-05-10T12:00:00.000Z'),
+		)
+
+		expect(result.weeks).toHaveLength(53)
+		expect(result.weeks[0].days[0].date).toBe('2025-05-05')
+		expect(result.weeks[52].days[6].date).toBe('2026-05-10')
+	})
+
 	it('maps contribution counts to five visual levels', () => {
 		expect(getContributionLevel(0)).toBe(0)
 		expect(getContributionLevel(1)).toBe(1)

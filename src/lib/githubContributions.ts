@@ -72,7 +72,7 @@ export function normalizeContributionWeeks(
 export function buildFallbackContributions(
 	username: string,
 	now = new Date(),
-	weekCount = 26,
+	weekCount = 53,
 ): ContributionResponse {
 	const end = startOfDay(now)
 	const start = new Date(end)

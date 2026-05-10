@@ -20,15 +20,16 @@ const COLORS: Record<string, string> = {
 
 interface SkillsProps {
 	skills: Skill[]
+	theme: 'light' | 'dark'
 }
 
-export default function Skills({ skills }: SkillsProps) {
+export default function Skills({ skills, theme }: SkillsProps) {
 	const categories = Array.from(new Set(skills.map((skill) => skill.category)))
 
 	return (
 		<section
 			id="habilidades"
-			className="relative overflow-hidden bg-slate-950 py-24 text-slate-100"
+			className="relative overflow-hidden bg-slate-50 py-24 text-slate-900 dark:bg-slate-950 dark:text-slate-100"
 		>
 			<div className="terminal-grid-bg opacity-60" aria-hidden />
 			<div className="relative z-10 mx-auto max-w-6xl px-6">
@@ -39,13 +40,13 @@ export default function Skills({ skills }: SkillsProps) {
 					transition={{ duration: 0.55 }}
 					className="mb-10 max-w-2xl"
 				>
-					<p className="font-mono text-xs font-semibold uppercase tracking-[0.22em] text-blue-300">
+					<p className="font-mono text-xs font-semibold uppercase tracking-[0.22em] text-blue-600 dark:text-blue-300">
 						/habilidades
 					</p>
-					<h2 className="mt-3 text-3xl font-bold text-slate-50 md:text-4xl">
+					<h2 className="mt-3 text-3xl font-bold text-slate-900 md:text-4xl dark:text-slate-50">
 						Mapa de tecnologias
 					</h2>
-					<p className="mt-3 text-sm leading-6 text-slate-400">
+					<p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
 						Um grafo leve de tecnologias conectadas por proximidade. No desktop, o
 						ponteiro afeta os nós em tempo real.
 					</p>
@@ -58,7 +59,7 @@ export default function Skills({ skills }: SkillsProps) {
 					transition={{ duration: 0.65, delay: 0.12 }}
 					className="terminal-panel relative overflow-hidden"
 				>
-					<SkillNetworkCanvas skills={skills} />
+					<SkillNetworkCanvas skills={skills} theme={theme} />
 					<div className="absolute bottom-4 right-4 flex max-w-[calc(100%-2rem)] flex-wrap justify-end gap-x-4 gap-y-2">
 						{categories.map((category) => (
 							<div key={category} className="flex items-center gap-1.5">
@@ -66,7 +67,7 @@ export default function Skills({ skills }: SkillsProps) {
 									className="h-1.5 w-1.5 rounded-full"
 									style={{ backgroundColor: COLORS[category] }}
 								/>
-								<span className="font-mono text-[10px] text-slate-500">
+								<span className="font-mono text-[10px] text-slate-600 dark:text-slate-500">
 									{LABELS[category] ?? category}
 								</span>
 							</div>

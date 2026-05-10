@@ -133,13 +133,13 @@ export default function HeroTerminal({ data }: HeroTerminalProps) {
 		<section
 			ref={sectionRef}
 			id="sobre"
-			className="terminal-hero relative min-h-screen overflow-hidden bg-[#050505] pt-20 text-slate-100"
+			className="terminal-hero relative min-h-screen overflow-hidden bg-white pt-20 text-slate-900 dark:bg-[#050505] dark:text-slate-100"
 		>
 			<div className="terminal-grid-bg" aria-hidden />
 			<div className="terminal-scanline" aria-hidden />
 
-			<div className="relative z-10 mx-auto grid min-h-[calc(100vh-5rem)] max-w-6xl grid-cols-1 content-center gap-10 px-6 py-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
-				<div className="flex flex-col justify-center">
+			<div className="relative z-10 mx-auto grid min-h-[calc(100vh-5rem)] max-w-6xl grid-cols-1 content-center gap-10 px-6 py-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-14">
+				<div className="flex min-w-0 flex-col justify-center">
 					<motion.div
 						initial={{ opacity: 0, y: 12 }}
 						animate={{ opacity: 1, y: 0 }}
@@ -157,7 +157,7 @@ export default function HeroTerminal({ data }: HeroTerminalProps) {
 							className="h-20 w-20 rounded-full border border-blue-300/55 object-cover shadow-[0_0_36px_rgba(37,99,235,0.26)] sm:h-24 sm:w-24 lg:h-28 lg:w-28"
 						/>
 						<h1
-							className="glitch-text max-w-[11ch] text-[clamp(2rem,10vw,2.5rem)] font-bold leading-[0.9] text-slate-50 md:text-5xl lg:text-6xl"
+							className="glitch-text max-w-[11ch] text-[clamp(2rem,10vw,2.5rem)] font-bold leading-[0.9] text-slate-900 md:text-5xl lg:text-6xl dark:text-slate-50"
 							data-text={name}
 							aria-label={data.name}
 						>
@@ -171,19 +171,21 @@ export default function HeroTerminal({ data }: HeroTerminalProps) {
 						transition={{ duration: 0.55, delay: 0.55 }}
 						className="mt-7 max-w-xl border-l border-blue-400/35 pl-5"
 					>
-						<p className="font-mono text-sm text-blue-300">
+						<p className="font-mono text-sm text-blue-700 dark:text-blue-300">
 							&gt; {scrambledRole}
 							<span className="text-slate-500"> @ </span>
 							<a
 								href={data.company.url}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="hover:text-blue-200"
+								className="hover:text-blue-500 dark:hover:text-blue-200"
 							>
 								{data.company.name}
 							</a>
 						</p>
-						<p className="mt-4 text-base leading-7 text-slate-400">{data.bio}</p>
+						<p className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-400">
+							{data.bio}
+						</p>
 					</motion.div>
 
 					<motion.div
@@ -224,9 +226,12 @@ export default function HeroTerminal({ data }: HeroTerminalProps) {
 					</motion.div>
 				</div>
 
-				<div ref={panelRef} className="hero-panel-wrap flex flex-col justify-center gap-4">
+				<div
+					ref={panelRef}
+					className="hero-panel-wrap flex min-w-0 flex-col justify-center gap-4"
+				>
 					<div className="terminal-panel overflow-hidden">
-						<div className="flex items-center justify-between border-b border-slate-700/70 px-4 py-3">
+						<div className="flex items-center justify-between border-b border-slate-200/80 px-4 py-3 dark:border-slate-700/70">
 							<div className="flex gap-1.5">
 								<span className="h-2 w-2 rounded-full bg-red-400/80" />
 								<span className="h-2 w-2 rounded-full bg-amber-400/80" />
@@ -241,16 +246,16 @@ export default function HeroTerminal({ data }: HeroTerminalProps) {
 								<p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">
 									education
 								</p>
-								<p className="mt-2 text-sm text-slate-300">
+								<p className="mt-2 text-sm text-slate-700 dark:text-slate-300">
 									{data.education.course}
 								</p>
-								<div className="mt-4 h-px bg-slate-800">
+								<div className="mt-4 h-px bg-slate-200 dark:bg-slate-800">
 									<div
-										className="h-px bg-blue-300"
+										className="h-px bg-blue-600 dark:bg-blue-300"
 										style={{ width: `${progress}%` }}
 									/>
 								</div>
-								<p className="mt-2 font-mono text-xs text-blue-300">
+								<p className="mt-2 font-mono text-xs text-blue-700 dark:text-blue-300">
 									{semester}/{data.education.totalSemesters} sem. · {progress}%
 								</p>
 							</div>
@@ -263,7 +268,7 @@ export default function HeroTerminal({ data }: HeroTerminalProps) {
 						</div>
 					</div>
 
-					<div ref={gridRef}>
+					<div ref={gridRef} className="min-w-0">
 						<GithubContributionGrid username={githubUsername} />
 					</div>
 				</div>
